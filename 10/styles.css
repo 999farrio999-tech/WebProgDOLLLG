@@ -67,22 +67,48 @@ nav li {
 }
 
 nav a {
-	display: inline-block;
-	text-decoration: none;
-	font-size: 1.2em;
-	color: #ffffff;
-	padding: 10px 20px;
-	background: #ff932d;
-	border-radius: 5px;
-	border: 1px solid #c95e00;
-	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.7);
-	text-shadow:
-		0px -1px 1px rgba(000,000,000,0.2),
-		0px 1px 0px rgba(255,255,255,0.3);
+	-webkit-transition: -webkit-transform .5s,
+	background-color 1s ease-in .5s;
+	transition: transform .5s,
+	background-color 1s ease-in .5s;
 }
 
 /* пользовательские стили  */
-
+nav a:hover {
+  background-color: red;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+@-webkit-keyframes logo {
+  from {
+    -webkit-transform: rotate(0) scale(.5);
+    left: 120%
+  }
+  50% {
+    -webkit-transform: rotate(-720deg) scale(.5);
+    left: 0;
+  }
+to {-webkit-transform: rotate(0) scale(1);
+}
+}
+@keyframes logo {
+  from {
+    transform: rotate(0) scale(.5);
+    left: 120%
+  }
+  50% {
+    transform: rotate(-720deg) scale(.5);
+    left: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+  }
+}
+.logo {
+	-webkit-animation: logo 3s;
+	animation: logo 3s;
+}
 
 
 
